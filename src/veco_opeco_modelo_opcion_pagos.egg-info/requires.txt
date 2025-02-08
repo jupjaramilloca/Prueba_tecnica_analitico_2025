@@ -1,0 +1,5 @@
+openpyxl>=3.1.2
+master-validation>=2.5.3
+pyodbc>=4.0.35
+orquestador2>=1.2.2
+veco-opeco-respaldologs>=1.1.3

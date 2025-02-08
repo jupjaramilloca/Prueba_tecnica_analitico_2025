@@ -1,0 +1,2 @@
+[console_scripts]
+veco_opeco_modelo_opcion_pagos = veco_opeco_modelo_opcion_pagos.ejecucion:main

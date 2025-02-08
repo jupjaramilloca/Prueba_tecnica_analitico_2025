@@ -1,0 +1,64 @@
+{
+    "global": {
+        "dsn": "impala-virtual-prd",
+        "prefijo": "opeco",
+        "zona_p": "proceso_ecosistemas",
+        "zona_r": "resultados_ecosistemas",
+        "in_oozie": "resultados.reporte_flujos_oozie",
+        "zona_tabla_input_mv": "proceso.test1",
+        "zona_tabla_output_mv": "proceso.test2",
+        "tbl_logs": "",
+        "tbl_emailer": ""
+    },
+    "LoadFiles": {
+        "insumo_var_rpta_alt_oot": {
+            "ruta": "C://Users/Juajaram/Documents/Prueba_tecnica_Analítico_2025/veco-opeco-modelo-opcion-pagos/001_insumos/prueba_op_base_pivot_var_rpta_alt_enmascarado_oot.csv",
+            "tbl": "var_rpta_alt_oot"
+        },
+        "var_rpta_trtest": {
+            "ruta": "C://Users/Juajaram/Documents/Prueba_tecnica_Analítico_2025/veco-opeco-modelo-opcion-pagos/001_insumos/prueba_op_base_pivot_var_rpta_alt_enmascarado_trtest.csv",
+            "tbl": "var_rpta_trtest"
+        },
+        "maestra_cuotas_pagos": {
+            "ruta": "C://Users/Juajaram/Documents/Prueba_tecnica_Analítico_2025/veco-opeco-modelo-opcion-pagos/001_insumos/prueba_op_maestra_cuotas_pagos_mes_hist_enmascarado_completa.csv",
+            "tbl": "maestro_cuotas_pagos"
+        },
+        "master_customer_data": {
+            "ruta": "C://Users/Juajaram/Documents/Prueba_tecnica_Analítico_2025/veco-opeco-modelo-opcion-pagos/001_insumos/prueba_op_master_customer_data_enmascarado_completa.csv",
+            "tbl": "master_customer_data"
+        },
+        "probabilidad_oblig": {
+            "ruta": "C://Users/Juajaram/Documents/Prueba_tecnica_Analítico_2025/veco-opeco-modelo-opcion-pagos/001_insumos/prueba_op_probabilidad_oblig_base_hist_enmascarado_completa.csv",
+            "tbl": "probabilidad_oblig"
+        }
+    },
+    "Entrenamiento": {
+        "sql_folder": "000_entrenamiento"
+    },
+    "Test": {
+        "sql_folder": "000_test"
+    },
+    "Entrenamiento_modelo": {
+        "path_model": "C:/Users/Juajaram/Documents/Prueba_tecnica_Analítico_2025/veco-opeco-modelo-opcion-pagos/src/veco_opeco_modelo_opcion_pagos/static/model",
+        "name_model": "propension_pago.pkl",
+        "train_file_path": "select * from proceso_ecosistemas.opeco_entrenamiento_model_pagos"
+    },
+    "Inferencia": {
+        "model_path": "C:/Users/Juajaram/Documents/Prueba_tecnica_Analítico_2025/veco-opeco-modelo-opcion-pagos/src/veco_opeco_modelo_opcion_pagos/static/model",
+        "model_name": "propension_pago.pkl",
+        "new_data": "select * from proceso_ecosistemas.opeco_sabana_test",
+        "output": "proceso_ecosistemas.opeco_sabana_test_pred"
+
+    },
+    "Guardar_informacion":{ 
+        "sql_folder":"002_diponibilizacion",
+        "sumision":"select * from proceso_ecosistemas.opeco_prediccion_pagos",
+        "name_file_1":"sumision.csv",
+        "resultado":"select * from proceso_ecosistemas.opeco_prediccion_pagos_resultado",
+        "name_file_2": "resultado_prueba.csv"
+    },
+
+    "ExtractTransformLoad": {
+        "parametro_tarea": "000_seleccion_variables"
+    }
+}

@@ -1,0 +1,63 @@
+2025-02-07 00:17:30,964:INFO:Starting the training process...
+2025-02-07 00:17:31,014:INFO:Data loaded successfully.
+2025-02-07 00:17:31,015:INFO:Training data shape: (11304, 16)
+2025-02-07 00:17:31,015:INFO:Test data shape: (2826, 16)
+2025-02-07 00:17:31,015:INFO:Training Pipeline...
+2025-02-07 00:17:32,419:INFO:Finished training Pipeline.
+2025-02-07 00:17:32,420:INFO:Training Pipeline...
+2025-02-07 00:19:34,312:INFO:Starting the training process...
+2025-02-07 00:19:34,314:INFO:Arguments parsed successfully.
+2025-02-07 00:19:34,364:INFO:Data loaded successfully.
+2025-02-07 00:19:34,365:INFO:Training data shape: (11304, 16)
+2025-02-07 00:19:34,366:INFO:Test data shape: (2826, 16)
+2025-02-07 00:19:34,367:INFO:Training Pipeline...
+2025-02-07 00:19:35,821:INFO:Finished training Pipeline.
+2025-02-07 00:19:35,822:INFO:Training Pipeline...
+2025-02-07 00:22:27,439:INFO:Iniciando el proceso de entrenamiento...
+2025-02-07 00:22:27,441:INFO:Argumentos analizados exitosamente.
+2025-02-07 00:22:27,500:INFO:Datos cargados exitosamente.
+2025-02-07 00:22:27,502:INFO:Forma de los datos de entrenamiento: (11304, 16)
+2025-02-07 00:22:27,502:INFO:Forma de los datos de prueba: (2826, 16)
+2025-02-07 00:22:27,503:INFO:Entrenando Pipeline...
+2025-02-07 00:22:29,153:INFO:Entrenamiento de Pipeline finalizado.
+2025-02-07 00:22:29,154:INFO:Entrenando Pipeline...
+2025-02-07 00:39:59,346:INFO:Entrenamiento de Pipeline finalizado.
+2025-02-07 00:39:59,347:INFO:Entrenando Pipeline...
+2025-02-07 00:40:08,148:INFO:Entrenamiento de Pipeline finalizado.
+2025-02-07 00:40:08,427:INFO:GridSearchCV(cv=5,
+             estimator=Pipeline(steps=[('preprocessor',
+                                        ColumnTransformer(transformers=[('num',
+                                                                         Pipeline(steps=[('scaler',
+                                                                                          StandardScaler())]),
+                                                                         ['var_rpta_alt',
+                                                                          'valor_cuota_mes',
+                                                                          'pago_total',
+                                                                          'total_ing',
+                                                                          'tot_activos',
+                                                                          'egresos_mes',
+                                                                          'tot_patrimonio',
+                                                                          'smmlv',
+                                                                          'lote',
+                                                                          'prob_propension',
+                                                                          'prob_alrt_temprana',
+                                                                          'prob_auto_cura']),
+                                                                        ('cat',
+                                                                         Pipeline(steps=[('onehot',
+                                                                                          OneHotEncoder(handle_unknown='ignore'))]),
+                                                                         ['marca_pago',
+                                                                          'tipo_cli',
+                                                                          'segm',
+                                                                          'subsegm'])])),
+                                       ('variance_threshold',
+                                        VarianceThreshold()),
+                                       ('selectkbest', SelectKBest()),
+                                       ('estimator',
+                                        RandomForestClassifier())]),
+             param_grid={'estimator__max_depth': [None, 10, 20, 30],
+                         'estimator__n_estimators': [100, 200, 300],
+                         'selectkbest__k': range(1, 8)}):
+2025-02-07 00:40:08,427:INFO:  Precisión: 0.6426043878273178
+2025-02-07 00:40:08,428:INFO:  Precisión: 0.641040887276397
+2025-02-07 00:40:08,428:INFO:  Recall: 0.6426043878273178
+2025-02-07 00:40:08,428:INFO:  F1 Score: 0.6412524516867488
+2025-02-07 00:40:08,428:INFO:Proceso de entrenamiento completado.
