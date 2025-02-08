@@ -1,0 +1,7 @@
+include versioneer.py
+include src/veco_opeco_modelo_opcion_pagos/_version.py
+include src/veco_opeco_modelo_opcion_pagos/static/sql
+include src/veco_opeco_modelo_opcion_pagos/static/sql/*.sql
+include src/veco_opeco_modelo_opcion_pagos/static/sql/000_ExtractTransformLoad/*.sql
+include src/veco_opeco_modelo_opcion_pagos/static/model
+include src/veco_opeco_modelo_opcion_pagos/static/model/*.pkl
