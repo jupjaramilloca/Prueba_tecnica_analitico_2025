@@ -327,36 +327,36 @@ class Entrenamiento_modelo(Step):
         print(f"Forma de los datos de prueba: {x_test.shape}")  ## Imprimir forma de los datos de prueba
 
         classifiers = [
-            # self.make_logistic_regressor(
-            #     max_features=args.max_features,  ## Número máximo de características
-            #     cv=args.cv,  ## Número de pliegues de validación cruzada
-            #     numeric_features=numeric_features,  ## Características numéricas
-            #     categorical_features=categorical_features,  ## Características categóricas
-            # ),
-            # self.make_random_forest_classifier(
-            #     max_features=args.max_features,  ## Número máximo de características
-            #     cv=args.cv,  ## Número de pliegues de validación cruzada
-            #     numeric_features=numeric_features,  ## Características numéricas
-            #     categorical_features=categorical_features,  ## Características categóricas
-            # ),
-            # self.make_decision_tree_classifier(
-            #     max_features=args.max_features,  ## Número máximo de características
-            #     cv=args.cv,  ## Número de pliegues de validación cruzada
-            #     numeric_features=numeric_features,  ## Características numéricas
-            #     categorical_features=categorical_features,  ## Características categóricas
-            # ),
-            self.make_xgboost_classifier(
-                max_features=args.max_features,  ## Número máximo de características
-                cv=args.cv,  ## Número de pliegues de validación cruzada
-                numeric_features=numeric_features,  ## Características numéricas
+            self.make_logistic_regressor(
+                 max_features=args.max_features,  ## Número máximo de características
+                 cv=args.cv,  ## Número de pliegues de validación cruzada
+                 numeric_features=numeric_features,  ## Características numéricas
+                 categorical_features=categorical_features,  ## Características categóricas
+             ),
+             self.make_random_forest_classifier(
+                 max_features=args.max_features,  ## Número máximo de características
+                 cv=args.cv,  ## Número de pliegues de validación cruzada
+                 numeric_features=numeric_features,  ## Características numéricas
                 categorical_features=categorical_features,  ## Características categóricas
-            ),
-            # self.make_lightgbm_classifier(
-            #     max_features=args.max_features,  ## Número máximo de características
-            #     cv=args.cv,  ## Número de pliegues de validación cruzada
-            #     numeric_features=numeric_features,  ## Características numéricas
-            #     categorical_features=categorical_features,  ## Características categóricas
-            # ),
+             ),
+             self.make_decision_tree_classifier(
+                 max_features=args.max_features,  ## Número máximo de características
+                 cv=args.cv,  ## Número de pliegues de validación cruzada
+                 numeric_features=numeric_features,  ## Características numéricas
+                 categorical_features=categorical_features,  ## Características categóricas
+             ),
+            #self.make_xgboost_classifier(
+            #   max_features=args.max_features,  ## Número máximo de características
+            #   cv=args.cv,  ## Número de pliegues de validación cruzada
+            #   numeric_features=numeric_features,  ## Características numéricas
+            #   categorical_features=categorical_features,  ## Características categóricas
+            #),
+             self.make_lightgbm_classifier(
+                 max_features=args.max_features,  ## Número máximo de características
+                 cv=args.cv,  ## Número de pliegues de validación cruzada
+                 numeric_features=numeric_features,  ## Características numéricas
+                 categorical_features=categorical_features,  ## Características categóricas
+             ),
         ]
 
         for classifier in classifiers:
