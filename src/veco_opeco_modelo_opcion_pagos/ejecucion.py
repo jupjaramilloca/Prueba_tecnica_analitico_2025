@@ -38,9 +38,9 @@ class RunOrchestador:
             os.mkdir(kw["log_path"])
         # Pasos del flujo a ejecutar en orden indicado
         steps = [
-            #LoadFiles(**kw),
-            # Entrenamiento(**kw),
-            # Test(**kw),
+            LoadFiles(**kw),
+            Entrenamiento(**kw),
+            Test(**kw),
             Entrenamiento_modelo(**kw),
             Inferencia(**kw),
             Guardar_informacion(**kw)
